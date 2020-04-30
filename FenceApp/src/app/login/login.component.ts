@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,12 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
+  isValid = true;
+
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private auth: AuthService
   ) {
 
     this.loginForm = this.formBuilder.group({
@@ -33,7 +37,10 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.router.navigate(['/userprofile']);
+    if (this.loginForm.value.inputEmail === 'test@gmail.com' && this.loginForm.value.inputPassword === 'test123') {
+      this.router.navigate(['/userprofile']);
+    }
+    this.isValid = false;
   }
 
 }
