@@ -1,6 +1,6 @@
 <div class="body">
     <div class="container text-center" style="max-width: 300px;margin:auto;">
-        <form [formGroup]="registerForm">
+        <form [formGroup]="registerForm" (ngSubmit)="submit()">
             <h1>Register</h1>
             <div>
                 <label for="inputFirstName" class="label">First Name</label>

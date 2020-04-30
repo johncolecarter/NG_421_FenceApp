@@ -1,6 +1,6 @@
 <div class="body">
     <div class="container text-center" style="max-width: 300px;margin: auto;">
-        <form [formGroup]="loginForm" class="form-signin">
+        <form [formGroup]="loginForm" class="form-signin" (ngSubmit)="submit()">
             <h1>Login</h1>
             <div>
                 <label for="inputEmail" class="label">Email Address</label>

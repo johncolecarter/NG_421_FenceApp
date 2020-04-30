@@ -1,0 +1,16 @@
+<div class="body">
+    <div class="container text-center" style="max-width: 300px; margin: auto;">
+        <form [formGroup]="userProfileForm">
+            <h1>User Profile</h1>
+            <div>
+                <label for="inputFirstName" class="label">First Name</label>
+                <input type="text" formControlName="inputFirstName" class="form-control" placeholder="ex. John">
+                <label class="alert alert-danger"
+                    *ngIf="!this.userProfileForm.controls.inputFirstName.valid && this.userProfileForm.controls.inputFirstName.touched">First
+                    name
+                    is
+                    required</label>
+            </div>
+        </form>
+    </div>
+</div>
