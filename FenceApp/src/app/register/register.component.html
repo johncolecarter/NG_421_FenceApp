@@ -1,1 +1,53 @@
-<p>register works!</p>
+<div class="body">
+    <div class="container text-center" style="max-width: 300px;margin:auto;">
+        <form [formGroup]="registerForm">
+            <h1>Register</h1>
+            <div>
+                <label for="inputFirstName" class="label">First Name</label>
+                <input type="text" formControlName="inputFirstName" class="form-control" placeholder="ex. John">
+                <label class="alert alert-danger"
+                    *ngIf="!this.registerForm.controls.inputFirstName.valid && this.registerForm.controls.inputFirstName.touched">First
+                    name
+                    is
+                    required</label>
+            </div>
+            <div>
+                <label for="inputLastName" class="label">Last Name</label>
+                <input type="text" formControlName="inputLastName" class="form-control" placeholder="ex. Smith">
+                <label class="alert alert-danger"
+                    *ngIf="!this.registerForm.controls.inputLastName.valid && this.registerForm.controls.inputLastName.touched">Last
+                    name
+                    is
+                    required</label>
+            </div>
+            <div>
+                <label for="inputEmail" class="label">Email Address</label>
+                <input type="email" formControlName="inputEmail" class="form-control" placeholder="ex. john@gmail.com">
+                <label class="alert alert-danger"
+                    *ngIf="!this.registerForm.controls.inputEmail.valid && this.registerForm.controls.inputEmail.touched">Email
+                    is
+                    required</label>
+            </div>
+            <div>
+                <label for="inputPassword" class="label">Password</label>
+                <input type="password" formControlName="inputPassword" class="form-control"
+                    placeholder="ex. Example123">
+                <label class="alert alert-danger"
+                    *ngIf="!this.registerForm.controls.inputPassword.valid && this.registerForm.controls.inputPassword.touched">Password
+                    required</label>
+            </div>
+            <div>
+                <label for="inputConfirmPassword" class="label">Confirm Password</label>
+                <input type="password" formControlName="inputConfirmPassword" class="form-control"
+                    placeholder="ex. Example123">
+                <label class="alert alert-danger"
+                    *ngIf="!this.registerForm.controls.inputConfirmPassword.valid && this.registerForm.controls.inputConfirmPassword.touched">Passwords
+                    do not match</label>
+            </div>
+            <button type="sumbit" [disabled]="!registerForm.valid" class="btn">Register</button>
+        </form>
+        <div>
+            <a routerLinkActive="active-link" routerLink="/login" class="route">Back to login</a>
+        </div>
+    </div>
+</div>

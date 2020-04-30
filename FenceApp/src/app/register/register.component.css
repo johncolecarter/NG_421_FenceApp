@@ -1,0 +1,20 @@
+.body {
+    background: lightseagreen;
+    height: 800px;
+    padding-top: 100px;
+}
+
+.btn {
+    margin-top: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 10px;
+    background: blue;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.route {
+    font-size: 15px;
+    color: black;
+}

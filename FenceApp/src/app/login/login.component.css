@@ -11,12 +11,16 @@
 }
 
 .container {
-    background: lightskyblue;
     padding: 15px;
-    border-radius: 10px;
 }
 
 .register {
     margin-top: 15px;
     font-size: 15px;
+}
+
+.body {
+    padding-top: 200px;
+    background: rgb(170, 238, 161);
+    height: 800px;
 }
