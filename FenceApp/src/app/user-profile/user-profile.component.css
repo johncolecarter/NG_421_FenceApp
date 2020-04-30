@@ -1,0 +1,23 @@
+.body {
+    background: lightcoral;
+    height: 800px;
+}
+
+.btn {
+    background: crimson;
+    margin-top: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: black;
+    border-radius: 10px;
+    border: grey 1px solid;
+}
+
+.route {
+    margin: 10px;
+    padding: 10px;
+    background: crimson;
+    border-radius: 10px;
+    border: grey 1px solid;
+    color: black;
+}
