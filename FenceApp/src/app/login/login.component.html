@@ -18,7 +18,7 @@
                     *ngIf="!this.loginForm.controls.inputPassword.valid && this.loginForm.controls.inputPassword.touched">Password
                     required</label>
             </div>
-            <label class="alert alert-danger" *ngIf="!isValid">Email or Password incorrect</label>
+            <label class="alert alert-danger" *ngIf="!isValid">Email or Password is incorrect</label>
             <button type="submit" class="btn" [disabled]="!loginForm.valid">Login</button>
         </form>
         <div>
