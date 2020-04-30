@@ -8,7 +8,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'userprofile', component: UserProfileComponent }
+  { path: 'userprofile', component: UserProfileComponent },
+  { path: '**', component: LoginComponent }
 ];
 
 @NgModule({
