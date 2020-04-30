@@ -1,0 +1,17 @@
+.label {
+    font-size: 30px;
+}
+
+.btn {
+    background: rgb(26, 101, 240);
+    border: blue;
+    margin-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.container {
+    background: lightskyblue;
+    padding: 15px;
+    border-radius: 10px;
+}

@@ -1,0 +1,20 @@
+<div class="container text-center" style="max-width: 300px;margin: auto;">
+    <form [formGroup]="loginForm" class="form-signin">
+        <h1>Login</h1>
+        <div>
+            <label for="inputEmail" class="label">Email Address</label>
+            <input type="email" formControlName="inputEmail" class="form-control" placeholder="ex. john@gmail.com">
+            <label class="alert alert-danger"
+                *ngIf="!this.loginForm.controls.inputEmail.valid && this.loginForm.controls.inputEmail.touched">Email is
+                required</label>
+        </div>
+        <div>
+            <label for="inputPassword" class="label">Password</label>
+            <input type="password" formControlName="inputPassword" class="form-control" placeholder="ex. Example123">
+            <label class="alert alert-danger"
+                *ngIf="!this.loginForm.controls.inputPassword.valid && this.loginForm.controls.inputPassword.touched">Password
+                required</label>
+        </div>
+        <button type="submit" class="btn" [disabled]="!loginForm.valid">Login</button>
+    </form>
+</div>
