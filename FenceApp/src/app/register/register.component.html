@@ -36,14 +36,15 @@
                     *ngIf="!this.registerForm.controls.inputPassword.valid && this.registerForm.controls.inputPassword.touched">Password
                     required</label>
             </div>
-            <!-- <div>
+            <div>
                 <label for="inputConfirmPassword" class="label">Confirm Password</label>
                 <input type="password" formControlName="inputConfirmPassword" class="form-control"
                     placeholder="ex. Example123">
                 <label class="alert alert-danger"
                     *ngIf="!this.registerForm.controls.inputConfirmPassword.valid && this.registerForm.controls.inputConfirmPassword.touched">Passwords
                     do not match</label>
-            </div> -->
+            </div>
+            <label class="alert alert-danger" *ngIf="!passMatch">Passwords do not match</label>
             <button type="sumbit" [disabled]="!registerForm.valid" class="btn">Register</button>
         </form>
         <div>

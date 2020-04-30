@@ -11,6 +11,8 @@ export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
 
+  passMatch = true;
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router
@@ -34,6 +36,7 @@ export class RegisterComponent implements OnInit {
       ])],
       inputConfirmPassword: ['', Validators.compose([
         Validators.required,
+        Validators.minLength(7)
       ])]
     });
   }
@@ -42,7 +45,10 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    this.router.navigate(['/userprofile']);
+    if (this.registerForm.value.inputPassword === this.registerForm.value.inputConfirmPassword) {
+      this.router.navigate(['/userprofile']);
+    }
+    this.passMatch = false;
   }
 
 }
